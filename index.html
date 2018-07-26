@@ -1,1 +1,86 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		
+		<!-- Font awesome icons -->
+		<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+		<!-- Custom css-->
+		<link href="bkmrk.css" rel="stylesheet">
+
+		<title>Bookmark Manager</title>
+	</head>
+	<body class="bg-light text-secondary">
+		
+		<div class="container">
+			
+			<!-- Top Search bar -->
+			<div class="card">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-4">
+							<h4>Manage Bookmarks</h4>
+						</div>
+						<div class="col-5" id="search-form">
+							<input type="text" class="form-control form-control-lg bg-light" placeholder="Search" id="search" />
+						</div>
+						<div class="col-3">
+							<button class="btn btn-dark" id="btn-backup"><i class="fas fa-download"></i> Backup</button>
+							<button class="btn btn-primary" id="btn-restore"><i class="fas fa-upload"></i> Restore</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Add bookmark form -->
+			<div class="pb-5 p-5" id="add-card">
+				<div class="card">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-3">
+								<input type="text" class="form-control" placeholder="Name" id="name" />
+							</div>
+							<div class="col-5">
+								<input type="url" class="form-control" placeholder="Enter URL" id="url" />
+							</div>
+							<div class="col-3">
+								<input type="text" class="form-control" placeholder="Category" id="category" list="categories" />
+								<datalist id="categories">
+								</datalist>
+							</div>
+							<div class="col-1">
+								<button class="btn btn-primary" id="add" data-type="add">Add</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Display area -->
+			<div class="card" id="result-card">
+				<div class="card-body">
+					<h5 class="card-title"> <span>All Bookmarks</span></h5>
+
+					<div id="bookmarks">
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+		
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<!-- Custom js -->
+		<script src="bkmrk.js"></script>
+	</body>
+</html>
